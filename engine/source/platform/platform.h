@@ -340,6 +340,7 @@ struct Platform
     static bool AlertOKCancel(const char* windowTitle, const char* message);
     static bool AlertRetry(const char* windowTitle, const char* message);
     static int AlertAbortRetryIgnore(const char* windowTitle, const char* message);
+    static void openURL(const char* url);
 
     struct LocalTime
     {

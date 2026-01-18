@@ -214,3 +214,14 @@ void Win32WinMgr::destroyWindow()
     DestroyWindow(winState.appWindow);
     winState.appWindow = NULL;
 }
+
+void Platform::openURL(const char* url)
+{
+    if (!url) return;
+    ShellExecuteA(NULL, "open", url, NULL, NULL, SW_SHOWNORMAL);
+}
+
+ConsoleFunction(openURL, void, 2, 2, "openURL(<url>)")
+{
+    Platform::openURL(argv[1]);
+}
