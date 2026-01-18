@@ -151,7 +151,7 @@ void Win32WinMgr::createWindow(const char* windowTitle, const U32 x, const U32 y
 
     mStyle = WS_CLIPCHILDREN | WS_CLIPSIBLINGS;
     
-    mStyle |= WS_OVERLAPPED/* | WS_THICKFRAME*/ | WS_CAPTION;// | WS_SYSMENU;
+    mStyle |= WS_OVERLAPPED/* | WS_THICKFRAME*/ | WS_CAPTION | WS_SYSMENU | WS_MINIMIZEBOX;
 
     //if (borderless)
     //    mStyle ^= WS_OVERLAPPED/* | WS_THICKFRAME*/ | WS_CAPTION;// | WS_SYSMENU;
